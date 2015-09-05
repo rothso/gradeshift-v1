@@ -1,0 +1,857 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><HTML><head>
+    <title>Portal</title>
+    <meta http-equiv='Content-Type' content='text/html' charset='UTF-8'>
+    <meta http-equiv='Content-Language' content='en-us'><noscript><meta http-equiv='refresh' content='0;url=index.php?modfunc=logout&reason=javascript'></noscript><script>var redSubmitDisabled = false;</script><link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />			<script>
+				var dynascan_index = "focus//dynascan/index.php";
+				var scanUrl = "";
+				var scanTmp = "";
+				var dynascan_host = window.location.host;
+				var fu_data;
+			</script>
+    <script src="assets/jquery/jquery.js"></script><script src="assets/jquery/jquery.ui.js"></script><link rel='stylesheet' type='text/css' href='https://duval.focusschoolsoftware.com/focus/build/sis.css?version=1437724079&hash=a88cb2bd7e6766960fb0483edd49c8d61b41416b'><script src='https://duval.focusschoolsoftware.com/focus/build/sis.js?version=1437724080&hash=f76d36f2f8cce51564150885447400d14200854f'></script><script>Focus.AJAXURL = 'Modules.php?modname=misc/Portal.php&ajax=true';</script>
+    <script src='assets/Templates/Templates.js'></script>
+    <link rel='stylesheet' media='only screen and (max-width: 400px)' href='assets/mobile.css' />
+
+    <!--[if !IE]>
+    <link rel=stylesheet type=text/css href='assets/themes/Default/stylesheet-static.css?1436963312'>
+    <script src='assets/resizetable.js?1436963312'></script>
+    <![endif]-->
+
+    <![if !IE]>
+    <link rel=stylesheet type=text/css href='assets/themes/Default/stylesheet-static.css?1436963312'>
+    <script src='assets/resizetable.js?1436963312'></script>
+    <![endif]>
+
+
+    <!--[if gt IE 6.5]>
+    <link rel=stylesheet type=text/css href='assets/themes/Default/stylesheet-static.css?1436963312'>
+    <script src='assets/resizetable.js?1436963312'></script>
+    <![endif]-->
+
+    <!--[if lte IE 6.5]>
+    <link rel=stylesheet type=text/css href='assets/themes/Default/stylesheet-IE6-static.css?1436963312'>
+    <script src='assets/resizetable_ie6.js?1420598425'></script>
+    <![endif]-->
+    <script src='assets/ckeditor/ckeditor.js?1420598421'></script>
+
+    <link rel='stylesheet' type='text/css' media='all' href='assets/jscalendar/calendar-blue2.css'>
+    <link rel='stylesheet' type='text/css' href='assets/style.css'>
+    <script src='//cdn.socket.io/socket.io-1.2.1.js'></script><link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Lato'></link><link rel='icon' href='assets/favicon.ico' type='image/x-icon'>
+    <link rel='shortcut icon' href='assets/favicon.ico' type='image/x-icon'>
+</head><body onbeforeunload='return check_cf();' onload='doOnload();' onclick='doOnBodyClick();' id='focusBody'  class='Package_SIS'><div id='XMLHttpRequestResult' style='display:none;margin-top:10px;background-color:white;'></div><div id="Migoicons" class="unreset" style="visibility:hidden;position:absolute;z-index:1000;top:-100"></div><script>
+		var TipId="Migoicons";
+		var FiltersEnabled = 1;
+		mig_clay();
+	</script><TABLE style="position:absolute;left:-1000px;"><TR id=width_sizer></TR></TABLE><DIV ID=wrap><DIV ID=BodyDivContainer class='BodyDiv' style='margin:0px;padding:0px;' width=100%><style>
+    #Top_Icon{display:table;height:45px;background-color:#DEDEDE;overflow:hidden;}
+    #Top_Icon>a{display:table-cell;width:100px;height:100%;padding: 5px;vertical-align: middle;z-index:1;}
+    #Top_Icon>.side_display{display:table-cell;width:100%;height:45px;vertical-align:middle;}
+    #Top_Icon>.side_display .messaging{ width:45px;position:absolute;right:0px;bottom:0px;top:0px;border-left:outset #777 1px;text-align:center;cursor:pointer;}
+
+    #menu{white-space:nowrap;}/*Remove this line if you want menu items to wrap if the screen is too small*/
+    #menu{position:relative;z-index:2;height:26px;line-height:25px;border-top:1px solid #3366FF;background:#3366FF url(assets/themes/Default/bg.png) repeat-x;vertical-align:top;font-family:Myriad Pro Semi Bold,Verdana,Tahoma,sans-serif;zoom:1}
+    #menu>span,#menu>a{position:relative;display:inline-block;height:100%;margin:0;padding:0 5px;border-right:1px solid #3366FF;background-color:inherit;background-image:inherit;background-repeat:inherit;color:#222;font-weight:bold;font-size:11px;cursor:pointer;white-space:nowrap}
+    #menu>a{padding:0 3px;white-space:nowrap;text-decoration:none}
+    #menu>.current{background:#AAA url(assets/themes/Default/bg.png) repeat-x}
+
+    #menu img{display:block;float:left;position:relative;top:4px;margin-right:3px}
+    #menu q{position:absolute;display:none;top:100%;left:-1px;border:1px solid #3366FF;border-top:0;background:#EEE;font-weight:normal;font-size:12px;color:#000;overflow:auto;border-radius:0 0 5px 5px;opacity:0.95}
+    #menu b{border-top:1px solid #3366FF;cursor:default}
+    #menu b,#menu>span a{position:relative;display:block;min-width:200px;height:16px;line-height:16px;padding:0 3px;white-space:nowrap;text-decoration:none;color:#000;overflow:hidden}
+    #menu q a:hover{background-color:#3366FF;color:#FFF}
+    #menu q a.current{font-weight:bold}
+    #menu q b:first-child{border-top:0}
+
+    #menu.size q{position:fixed;display:block;visibility:hidden}
+    #menu .show{background:#3366FF!important;background-image:none;color:#FFF;display:inline-block !important;}
+    #menu .show>q{display:block}
+
+    #menu>br{clear:both}
+
+    .DarkGradientBG{background-image:url(assets/themes/Default/bg_dark.jpg);padding:0.2em;}
+    .EntireBox{border:1px solid #3366FF!important}
+    .BoxContent{background-color:#FFF;border:1px solid #3366FF}
+    .BoxContentDiv{padding:5px}
+    .BoxContentBackground{background-color:#FFF}
+    td.BoxHeading{background:#3366FF url('assets/jquery/ui.themes/redmond/images/ui-bg_gloss-wave_alpha_500x100.png') 50% 50% repeat-x;border-color:#3366FF}
+    td.BoxHeading{background:#3366FF url('assets/jquery/ui.themes/redmond/images/ui-bg_gloss-wave_alpha_500x100.png') 50% 50% repeat-x;border-color:#3366FF}
+    tr.BoxHeading{background:#3366FF url('assets/jquery/ui.themes/redmond/images/ui-bg_gloss-wave_alpha_500x100.png') 50% 50% repeat-x !important;}
+    .PopTable .ui-tabs, .ui-tabs-panel{padding:0px !important;margin:0px;}
+    .PopTable .ui-tabs-nav {font-size:0.75em;}
+    .PopTable .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited{color: #333;font-family: "Verdana","Arial",sans-serif;}
+    .PopTable .ui-tabs-nav li a{padding:.25em .5em;}
+    .PopTable .ui-widget-header{border-color:#3366FF; background:#3366FF url("assets/jquery/ui.themes/redmond/images/ui-bg_gloss-wave_alpha_500x100.png") 50% 50% repeat-x !important;}
+    .PopTable, .PopTable .ui-state-default{border-color:#3366FF;;}
+    .hilite{background-color:#749FFF!important}
+    .hilite1{background-color:#749FFF!important}
+    .hil_row{background-color:#749FFF!important}
+    .GradebookHighlight{background-color:#749FFF!important}
+    .select-free{width:350px;/*must have for any value*/;}
+
+    #Page_Content,#print_iframe{
+    position : absolute;
+    top      :72px;
+    bottom   : 25px !important;
+    }
+
+    .print_iframe{width:100%;z-index:1}
+    #kill_iframe{position:absolute;line-height:42px;height:42px;font-weight:bold;size:24px;left:20px;vertical-align:middle;top:91px;z-index:100;cursor:pointer}
+    #Ajax_Loading{top:71px}
+
+
+    #plugin_notice{background:#749FFF;padding:50px;position:absolute;display:block;left:50%;top:150px;height:200px;width:400px;margin-left:-200px;border:2px solid #04316C}
+</style>
+
+    <div id="Top_Icon" >
+        <a class="logo-link" href="Modules.php?modname=misc/Portal.php"><img src="assets/themes/Default/logo.png"></a>
+        <div class="side_display"><form id='redirects' action='Modules.php?modname=misc/Portal.php' method='POST'>
+            <ul id='Top_Right'><li  class="Header_Top_Right_Option Header_Top_Right_Option_First"><B>Rothanak So</B></li><li class='finance-hidden Header_Top_Right_Option'>Paxon Advanced Studies - 0751</li><li class='finance-hidden Header_Top_Right_Option'><SELECT name=side_syear class='swiftbox' onChange='document.forms[0].submit();'  ><OPTION value=2009>2009-2010</OPTION><OPTION value=2010>2010-2011</OPTION><OPTION value=2011>2011-2012</OPTION><OPTION value=2012>2012-2013</OPTION><OPTION value=2013>2013-2014</OPTION><OPTION value=2014 SELECTED>2014-2015</OPTION><OPTION value=2015>2015-2016</OPTION><OPTION value=2016>2016-2017</OPTION></SELECT></li>
+                <li class='finance-hidden Header_Top_Right_Option'>
+                    <SELECT name=side_mp class='swiftbox' onChange='document.forms[0].submit();'>
+                        <OPTION value="2900" >Quarter 1</OPTION>
+                        <OPTION value="2901" >Quarter 2</OPTION>
+                        <OPTION value="2902" >Quarter 3</OPTION>
+                        <OPTION value="2903" SELECTED>Quarter 4</OPTION>
+                        <!-- pro_weighting off -->
+                    </SELECT>
+                </li>
+            </ul></FORM></div>
+    </div>
+    <div id="menu" class="size">
+			<span class='current'>
+							 School Information
+							<q><a class='current' href='Modules.php?modname=misc/Portal.php' >&rsaquo; Portal</a><a class='' href='Modules.php?modname=School_Setup/Schools.php' >&rsaquo; School Information</a><a class='' href='Modules.php?modname=School_Setup/Calendar.php' >&rsaquo; Calendar</a></q>
+						</span><span class=''>
+							 My Information
+							<q><a class='' href='Modules.php?modname=Users/Preferences.php' >&rsaquo; Preferences</a></q>
+						</span>		</div>
+
+
+    <div class="focus-footer">
+        <div class="focus-footer-table">
+            <div class="focus-footer-cell align-left">
+                <div class="inline-block align-left">
+                </div>
+            </div>
+
+            <div class="focus-footer-cell align-center">
+                <div class="inline-block align-left">
+                    <a class="footer-button student-list-button plain link hidden" href="">
+                        Back to Student List
+                    </a>
+
+
+                    <button type="button" class="footer-button print-button plain link hidden">
+                        Print
+                    </button>
+
+                    <button type="button" class="footer-button print-options-button plain hidden">
+                        &#9660;
+                    </button>
+                    <a class="footer-button create-report-button plain link hidden" href="Modules.php?modname=Reports/SavedReports.php&modfunc=new">
+                        Create Report
+                    </a>
+
+                    <button type="button" class="footer-button unlock-button plain link hidden">
+                        Unlock
+                    </button>
+                </div>
+            </div>
+
+            <div class="focus-footer-cell align-right">
+                <div class="inline-block align-left">
+
+                    <button type="button" class="footer-button help-button plain link">
+                        Help
+                    </button>
+
+                    <a class="footer-button logout-button plain link" href="index.php?logout">
+                        Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="focus-modal-template" class="focus-modal hidden">
+            <div class="focus-modal-overlay"></div>
+
+            <div class="focus-modal-container">
+                <div class="focus-modal-close-button">
+                    X
+                </div>
+
+                <div class="focus-modal-content"></div>
+            </div>
+        </div>
+
+        <script>
+(function() {
+	if(Focus && Focus.PrintController) {
+		Focus.PrintController.post_string = {"modname":"misc\/Portal.php","side_mp":"2903","search_modfunc":"list"};
+	}
+}());
+</script>
+
+        <div class="focus-print focus-modal-hidden">
+            <iframe class="focus-print-iframe"></iframe>
+        </div>
+
+        <form class="focus-print-options reset-form hidden">
+            <h1 class="focus-print-options-header">Print Options</h1>
+
+            <div>
+                <div class="focus-print-label-text">
+                    Template:
+                </div>
+
+                <select class="focus-print-option-template">
+                    <option value=""></option>
+
+                    <option value='3'>Bullying or Harassment Investigation Checklist</option><option value='24'>Detailed DOP Letterhead</option><option value='10'>Duval County Magnet Application Form</option><option value='15'>Duval County Public Schools</option><option value='13'>Duval County report card</option><option value='22'>Duval Letterhead</option><option value='12'>Duval secondary report card</option><option value='27'>ESE Student Course Schedule</option><option value='9'>Exceptional Education Transportation </option><option value='17'>Full time equivalency funding gained from other schools</option><option value='18'>Full time equivalency student funding record ESE134- Part 1 (second school)</option><option value='16'>Full time equivalency students receiving less then fullfunding</option><option value='20'>Full Time Equivalency students receiving more then full funding</option><option value='6'>Parent/Legal Guardian letter 2</option><option value='4'>Parent/Legal Guardian Notification Letter</option><option value='14'>Progress report</option><option value='8'>Referral Form</option><option value='21'>Schedule Letterhead</option><option value='19'>School Funding Certificate</option><option value='11'>Stay Away Agreement</option><option value='26'>Student Detail ELL</option><option value='25'>Student FCAT Attendance </option>		</select>
+            </div>
+
+            <div>
+                <label>
+                    <div class="focus-print-label-text">
+                        Small Font:
+                    </div>
+
+                    <input type="checkbox" class="focus-print-option-small">
+                </label>
+            </div>
+        </form>
+
+        <div class="focus-help focus-modal-hidden">
+            <div class="focus-help-iframe-container">
+                <iframe class="focus-help-iframe"></iframe>
+            </div>
+
+            <form class="focus-help-preferences reset-form">
+                <div class="focus-help-new-window-container">
+                    <a class="focus-help-new-window" href="https://focusulms.focusschoolsoftware.com/focus/FocusUniversity/index.php?program=misc/Portal.php&profile=student&fullpage=1" target="_blank">Open in a new window</a>
+                </div>
+
+                <div class="focus-help-label">
+                    Choose the role that best describes your job:
+                    <select name="role">
+                        <option value='0' selected>Teacher</option><option value='1' >School Administrator</option><option value='2' >Guidance</option><option value='3' >District Administrator</option><option value='4' >Medical</option><option value='5' >Data Entry</option><option value='6' >Special Programs</option>			</select>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="checkbox" name="newsletter" value="1" >
+                        Subscribe to the quarterly Focus University Newsletter
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="checkbox" name="notifications" value="1" >
+                        Receive notifications of training opportunities
+                    </label>
+                </div>
+
+                <input type="hidden" name="focus_university_action" value="update">
+            </form>
+        </div>
+
+        <script>
+	// Focus.HelpController is defined in help.js
+	Focus.HelpController.initialized = true;
+	Focus.HelpController.base_url	 = 'https://focusulms.focusschoolsoftware.com/focus/FocusUniversity/';
+	Focus.HelpController.moodle_help_url = 'https://training.focusschoolsoftware.com/moodle/focus_help.php?program=misc/Portal.php&profile=student';
+	Focus.HelpController.moodle_base_url = 'https://training.focusschoolsoftware.com/moodle/';
+	Focus.HelpController.help_url    = 'https://focusulms.focusschoolsoftware.com/focus/FocusUniversity/index.php?program=misc/Portal.php&profile=student';
+	Focus.HelpController.profile	 = 'student';
+	Focus.HelpController.modname	 = 'misc/Portal.php';
+	Focus.HelpController.session_url = 'FocusUniversity.php?focus_university_action=sessionkey';
+	Focus.HelpController.client_id   = '20870';
+</script>
+
+        <script type="text/javascript">
+		window.Focus = window.Focus || {};
+		Focus.AJAXURL = Focus.AJAXURL || "Modules.php?modname=misc/Portal.php&ajax=true";
+
+		try {
+			if ('help' in parent) {
+				var expanded = parent.help.location.href.search(/expanded=true/i);
+				if (expanded > 0) {
+					var requests = parent.help.location.href.substring(parent.help.location.href.indexOf('?') + 1).split("&");
+					var element;
+					var append_req = "";
+						for (var i = 0; i < requests.length; i++) {
+							if (requests[i].search(/portal/i) == -1) {
+								append_req += requests[i] + "&";
+							}
+					}
+					if (append_req != "") {
+						append_req = append_req.substring(0, append_req.length - 1);
+					}
+
+											parent.help.location='Bottom.php?'+append_req+'&portal=true';
+									}
+			}
+		} catch (e) {}
+	</script>
+    </div>
+    <div class="login-as-popup focus-modal-hidden">
+        <h2>Log In As:</h2>
+        <select class="swiftbox login-as"></select>
+    </div>
+    <div style=position:relative:height:0px;width:0px;><DIV ID='Ajax_Loading'><span id='Ajax_Loading_Span'><!--LOADING<BR><img src=assets/loading.gif width=128px;>--></span></DIV></div><DIV ID='Ajax_Loader'><DIV ID='Page_Content' class='page-content '><div id="dwtcontrolContainer" class="DWTContainer" style="position:absolute;left:-1000px;"></div><TABLE width=100% border=0 cellpadding=0 cellspacing=0 class="DarkGradientBG BottomButton"><TR><TD class="DarkGradientBG BottomButton" align=left> &nbsp;<font color=#000000><B><img src="modules/School_Setup/School_Information.png" border=0><IMG SRC=assets/pixel_trans.gif height=1 width=4><font size=+1>&nbsp; &nbsp; &nbsp; Welcome, Rothanak So</font></B></font></TD><TD align=right class="DarkGradientBG BottomButton" valign=top style="padding-right:5px;"><font color=#000000><B>Last login: Wednesday, 7:00pm</B></font></TD></TR></TABLE><table border="0" cellspacing="0" cellpadding="0" class="Portal_Table" style="width:100%; height: 10px;"><colgroup><col width='33%' style='max-width: 33%'><col width='33%' style='max-width: 33%'><col width='33%' style='max-width: 33%'></colgroup><tr><td class='portal_block_Alerts' valign='top' height='100% 'colspan='1' rowspan='1'><style type='text/css'>
+        div[id^="divtrigger_event_options"]
+        {
+        display: inline;
+        }
+        .number[id^="inputtrigger_event_options"]
+        {
+        width: 30px;
+        }
+    </style><style>
+        .alert{color:#DD0 !important; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;}
+    </style>
+        <script>
+$("body").on("click", ".viewTA", function(){
+	viewFasTest(this);
+});
+
+function viewFasTest(element) {
+	var shrink_width = 500;
+	if(viewFasTest.active_fas == undefined)
+		viewFasTest.active_fas = '';
+
+	element = $(element);
+	element.removeClass('alert');
+	var $form = $("<form></form>")
+	$form.attr("method", "GET");
+	$form.attr("action", "Modules.php");
+	var html = '';
+	var data = element.data();
+
+	for (var i in data) {
+		html += '<input type="hidden" name="'+i+'" value="'+data[i]+'">';
+	}
+	$form.html( html );
+	if( this.active_fas == data.fas_test_id+'_'+ data.student_id )
+		return true;
+	viewFasTest.active_fas = data.fas_test_id+'_'+ data.student_id;
+	active_gradebook_assignment = data.gradebook_assignment_id;
+
+	if($('#textview').length == 0) {
+		$('#Page_Content').width( ($('#Page_Content').width()-shrink_width) )
+		$('#Ajax_Loader').append('<div id="textview" style="border-left:solid black 1px;width:499px;right:0px;top:0px;bottom:0px;position:absolute;"></div>');
+	}
+	$form.appendTo('body');
+	$('#textview,#questionitems').html('');
+
+	$.ajax({
+		url:'Modules.php',
+		data:merge_options(data, {'modname':'Focus_Assessment_System/PostComment.php','remove_alerts':true, '_FOCUS_PDF':'true'}),
+		type:'POST',
+		dataType:'html',
+		success:function(data){console.log(data)}
+	});
+	function merge_options(obj1,obj2){
+		var obj3 = {};
+		for (var attrname in obj1) { obj3[attrname] = obj1[attrname]; }
+		for (var attrname in obj2) { obj3[attrname] = obj2[attrname]; }
+		return obj3;
+	}
+
+	$form.iframePreview({
+		killText:'Close Test',
+		complete:function() {
+			handleContainerResize();
+			element.closest('TR.lo_row').find('.jsPointsCell .clickable').click();
+		},
+		appendID:'textview',
+		close:function(){$form.remove();$('#textview,#questionitems').remove();$('#Page_Content').width('100%'); handleContainerResize();viewFasTest.active_fas = '';},
+	});
+}
+
+$("body").on("focus", ".jsPointsCell input", function(){
+	if($('#textview').length > 0) {
+		$(this).closest('TR.lo_row').find('.viewTA').trigger('click');
+	}
+});
+</script>
+
+        <TABLE class="Box" cellspacing="0" cellpadding="0" width=100% height=100%><TR><TD class="BoxHeading">Alerts</TD></TR><TR><TD class="BoxContent" valign="Top"><div data-bind="with: alertModule"><div style="display:none;" data-bind="visible:messageAlerts().length == 0">There are no alerts.</div></div><BR /><BR />
+            <div data-bind="with: alertModule" id="messenger_alert_portal">
+                <div id="messenger_alert_portal_alerts" style="display:none;" data-bind="visible:messageAlerts().length > 0">
+                    <div id="messenger_alert_portal_alert_title" data-bind="click:toggleMessageBoard">
+                        New Messenger Alerts <img src="assets/messages.png" border="0" vspace="0" style="height:17px;vertical-align:middle;" alt="Open Messenger Portal">
+                    </div>
+                    <UL data-bind="foreach: messageAlerts">
+                        <li style="height:30px;position:relative;" data-bind="{click:$root.alertModule.handleAlertClick}" style="position:relative;">
+                            <div data-bind="if:$data.user_id.substring(0,1)=='s'" style="position:absolute;top:0px;left:0px;width:30px;height:30px;overflow:hidden;">
+                                <img data-bind="attr:{src:getImage}, event:{error:noImage.bind({}, $element)}" style="width:30px">
+                            </div>
+                            <span style="padding-left:10px;" data-bind="text: $data.name, style:{marginLeft:$data.user_id.substring(0,1)=='s' ? '21px' : '0px' }"></span><BR>
+                            <span class="alert_type" data-bind="html: getAlertType(), style:{marginLeft:$data.user_id.substring(0,1)=='s' ? '21px' : '0px' }"></span>
+                            <div class="online_status" data-bind="style:{ backgroundColor: $root.onlinePersons.checkOnline($data.user_id) ? '#0C0' : '#F00' }"></div>
+                        </li>
+                    </UL>
+                </div>
+            </div></td></tr></TABLE>
+    </td><td class='portal_block_Messages' valign='top' height='100% 'colspan='1' rowspan='1'><TABLE class="Box" cellspacing="0" cellpadding="0" width=100% height=100%><TR><TD class="BoxHeading">Messages</TD></TR><TR><TD class="BoxContent" valign="Top"></td></tr></TABLE>
+    </td><td class='portal_block_Upcoming Events' valign='top' height='100% 'colspan='1' rowspan='1'><TABLE class="Box" cellspacing="0" cellpadding="0" width=100% height=100%><TR><TD class="BoxHeading">Upcoming Events - <A HREF=Modules.php?modname=School_Setup/Calendar.php>View Calendar</A></TD></TR><TR><TD class="BoxContent" valign="Top">There are no upcoming events.</td></tr></TABLE>
+    </td></tr><tr><td class='portal_block_Featured Programs' valign='top' height='100% 'colspan='3' rowspan='1'>		<script src="assets/DisableDoubleClicks.js"></script>
+        <script>
+			// Disable clicks for 3 seconds each time link is clicked
+			$(function() {
+				DisableDoubleClicks(3);
+			});
+		</script>
+        <TABLE class="Box" cellspacing="0" cellpadding="0" width=100% height=100%><TR><TD class="BoxHeading">Featured Programs</TD></TR><TR><TD class="BoxContent" valign="Top"><table><tr><td valign="top"><table class="BoxContents"><tr><td colspan='4'></td><td>Select teachers to Message:</td></tr><tr><td style='display:none'>Z</td><TD valign=middle><img src="modules/School_Setup/School_Information.png" border=0></td><td>
+
+            <a href='Modules.php?modname=School_Setup/Calendar.php'><b>Calendar</b></a></td><td width='5'> </td><td></td></tr><tr></tr></table></td><td>
+            <form id='Email' style='display: none'>
+                <table>
+                    <tr></tr>
+                    <tr>
+                        <td>Your Email Address</td>
+                        <td><input id='EmailFrom' type='text' size='39' value=''></td>
+                    </tr>
+
+                    <tr>
+                        <td>CC:</td>
+                        <td><input type='text' size='39' id='EmailCC'></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan='2'>
+                            <label>
+                                <input type=checkbox id=EmailCopy>
+                                Receive Personal Copy
+                            </label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan='2'>
+                            <textarea style='width: 99%; height: 200px;' id='EmailMessage'></textarea>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align='center' colspan='2'>
+                            <img id='EmailLoading' src='assets/loading.gif' style='display: none'>
+                            <button id='EmailSubmit' type='submit'>Send</button>
+                        </td>
+                    </tr>
+                </table>
+            </form></td></tr></table><br><a onclick="switchMenu('all_programs_table', 1000);" style="cursor:pointer;">
+            <img src="assets/arrow_right.gif" id="all_programs_table_arrow" width="17" height="17">
+            <b>View All Programs</b>
+        </a><br>
+
+            <div class="Floating" style="position: relative;">
+                <div id="all_programs_table" style="position: absolute; display: none; width: 100%;"><div class="EntireBox" width="100%;"><div style='margin-top: 10px;'><img src='modules/School_Setup/School_Information.png'> <b>School Information</b><div class='BoxContents' style='margin-left: 10px; margin-top: 5px;'>
+                    <b></b><div class='BoxContents' style='margin-left: 5px; margin-top: 2px;'>
+                    <b>&rsaquo;</b><a href='Modules.php?modname=misc/Portal.php'>Portal</a>
+                </div><div class='BoxContents' style='margin-left: 5px; margin-top: 2px;'>
+                    <b>&rsaquo;</b><a href='Modules.php?modname=School_Setup/Schools.php'>School Information</a>
+                </div><div class='BoxContents' style='margin-left: 5px; margin-top: 2px;'>
+                    <b>&rsaquo;</b><a href='Modules.php?modname=School_Setup/Calendar.php'>Calendar</a>
+                </div></div></div><div style='margin-top: 10px;'><img src='modules/Students/students_icon.png'> <b>My Information</b><div class='BoxContents' style='margin-left: 10px; margin-top: 5px;'>
+                    <b></b><div class='BoxContents' style='margin-left: 5px; margin-top: 2px;'>
+                    <b>&rsaquo;</b><a href='Modules.php?modname=Users/Preferences.php'>Preferences</a>
+                </div></div></div></div></div></td></tr></TABLE>
+    </td></tr><tr><td class='portal_block_12' valign='top' height='100% 'colspan='1' rowspan='2'><TABLE class="Box" cellspacing="0" cellpadding="0" width=100% height=100%><TR><TD class="BoxHeading">Welcome to the DCPS MyGrade Portal </TD></TR><TR><TD class="BoxContent" valign="Top">Accessing the&nbsp;<strong>DCPS MyGrade Portal</strong>&nbsp;is a great way to help ensure your student&rsquo;s academic success. This wonderful tool allows parents to see their student&rsquo;s homework, school calendar, teacher websites, grades, and attendance all at your fingertips. Also, be sure to check out all of the digital resources to help maximize their learning. &nbsp;Click on this link to learn more about the dcps.mygradeportal.com<br />  <br />  Parent Academy<br />  The Parent Academy is a family resource designed for parents, caregivers, and community members to promote involvement and enhance student achievement. classes, activities, and resources.&nbsp;The Parent Academy&#39;s focus is in three strands: Student Achievement, Parenting &amp; Advocacy, and Personal &amp; Individual Growth.&nbsp;Click on the link to learn more&nbsp;<strong><a href="http://www.duvalschools.org/Page/7398">Parent Academy</a></strong>.</td></tr></TABLE>
+    </td><td class='portal_block_ ' valign='top' height='100% 'colspan='1' rowspan='1'></td><td class='portal_block_ ' valign='top' height='100% 'colspan='1' rowspan='1'></td></tr><tr><td class='portal_block_ ' valign='top' height='100% 'colspan='1' rowspan='1'></td><td class='portal_block_ ' valign='top' height='100% 'colspan='1' rowspan='1'></td></tr><tr><td class='portal_block_11' valign='top' height='100% 'colspan='1' rowspan='1'><TABLE class="Box" cellspacing="0" cellpadding="0" width=100% height=100%><TR><TD class="BoxHeading">DCPS ES Digital Curriculum</TD></TR><TR><TD class="BoxContent" valign="Top"><table border="1" cellpadding="1" cellspacing="1" style="width:500px">  	<tbody>  		<tr>  			<td><span style="color:#0000CD"><strong>Math&nbsp;</strong></span><br />  			<strong><a href="https://www.pearsonsuccessnet.com/snpapp/login/login.jsp" target="_blank">K-5 enVision Math</a></strong></td>  			<td>Pearson SuccessNet -Access information can be obtained from the classroom teacher.</td>  		</tr>  		<tr>  			<td><span style="color:#0000CD"><strong>Reading</strong></span><br />  			<strong><a href="http://www.eduplace.com/rdg/index.jsp" target="_blank">Textbook Support Materials</a></strong></td>  			<td>K-5 Resources to help support the Houghton Mifflin Harcourt Reading textbook at school and at home.</td>  		</tr>  		<tr>  			<td><strong><a href="http://www.eduplace.com/eservices" target="_blank">Reading K-5 Edu Place Online Leveled Readers</a></strong></td>  			<td>Online level Readers that help support their instruction in school.&nbsp; Login information can be obtained by the classroom teacher or you can use the Generic Username:&nbsp; dcpsstudent&nbsp;&nbsp; Password: student.</td>  		</tr>  		<tr>  			<td><span style="color:#0000CD"><strong>Science</strong></span><br />  			<strong><a href="https://www.pearsonsuccessnet.com/snpapp/login/login.jsp" target="_blank">Science K-5 </a></strong></td>  			<td>Online Resources to help support the K-5 Science Textbook</td>  		</tr>  		<tr>  			<td><span style="color:#0000CD"><strong>Social Studies</strong></span><br />  			<strong><a href="http://www.eduplace.com/ss/index.jsp" target="_blank">Social Studies K-5</a></strong></td>  			<td>Resources to help support the Houghton Mifflin Harcourt Social Studies textbook</td>  		</tr>  		<tr>  			<td><span style="color:#0000CD"><strong>Art</strong></span><br />  			<strong><a href="http://www.harcourtschool.com/menus/art_everywhere/index.html" target="_blank">Art K-5</a></strong></td>  			<td>Art Everywhere has resources for teachers, parents, multimedia Art Glossary and Biographies, and</td>  		</tr>  		<tr>  			<td><span style="color:#0000CD"><strong>Music</strong></span><br />  			<strong><a href="http://spotlightonmusic.macmillanmh.com/music/teachers" target="_blank">Music</a></strong></td>  			<td>Spotlight on Music - Online Resources to help reinforce and enrich K-5 Music<br />  			&nbsp;</td>  		</tr>  		<tr>  			<td><span style="color:#0000CD"><strong>Health/PE</strong></span><br />  			<strong><a href="http://www.harcourtschool.com/menus/health_fitness/" target="_blank">Health - Fitness K-5 </a></strong></td>  			<td>Harcourt Health and Fitness Digital Resources</td>  		</tr>  	</tbody>  </table>  <br />  &nbsp;</td></tr></TABLE>
+    </td><td class='portal_block_13' valign='top' height='100% 'colspan='1' rowspan='1'><TABLE class="Box" cellspacing="0" cellpadding="0" width=100% height=100%><TR><TD class="BoxHeading">DCPS MS Digital Curriculum</TD></TR><TR><TD class="BoxContent" valign="Top"><table border="1" cellpadding="1" cellspacing="1" style="width:500px">  	<tbody>  		<tr>  			<td><strong><span style="color:#0000CD">Math</span><br />  			<a href="http://connected.mcgraw-hill.com/connected/login.do" target="_blank">M/J Math 1 and Adv.</a></strong></td>  			<td>ConnectED textbook and digital resources. Access and Master Code Information can be obtained from the classroom teacher.</td>  		</tr>  		<tr>  			<td><a href="http://connected.mcgraw-hill.com/connected/login.do" target="_blank"><strong>M/J Math 2 and Adv.</strong></a><br />  			&nbsp;</td>  			<td>ConnectED textbook and digital resources. Access and Master Code Information can be obtained from the classroom teacher.</td>  		</tr>  		<tr>  			<td><a href="http://connected.mcgraw-hill.com/connected/login.do" target="_blank"><strong>M/J Math 3 and Adv.</strong></a><br />  			&nbsp;</td>  			<td>ConnectED textbook and digital resources. Access and Master Code Information can be obtained from the classroom teacher.</td>  		</tr>  		<tr>  			<td><a href="http://connected.mcgraw-hill.com/connected/login.do" target="_blank"><strong>Algebra I</strong></a><br />  			&nbsp;</td>  			<td>ConnectED textbook and digital resources. Access and Master Code Information can be obtained from the classroom teacher.</td>  		</tr>  		<tr>  			<td><a href="http://connected.mcgraw-hill.com/connected/login.do" target="_blank"><strong>Algebra I Honors</strong></a><br />  			&nbsp;</td>  			<td>ConnectED textbook and digital resources. Access and Master Code Information can be obtained from the classroom teacher.<br />  			&nbsp;</td>  		</tr>  		<tr>  			<td><a href="http://connected.mcgraw-hill.com/connected/login.do"><strong>Geometry</strong></a><br />  			&nbsp;</td>  			<td>ConnectED textbook and digital resources. Access and Master Code Information can be obtained from the classroom teacher.</td>  		</tr>  		<tr>  			<td><span style="color:#0000CD"><strong>ELA/Reading</strong></span><br />  			<a href="http://www.classzone.com/cz/books/ml_lit_gr06_fl/book_home.htm?state=FL" target="_blank"><strong>M/J Literature Grade 6</strong></a><br />  			<br />  			<br />  			&nbsp;</td>  			<td>McDougal Littell Literature Grade 6 Online textbook and digital resources. Access and Key Code Information can be obtained from the classroom teacher.</td>  		</tr>  		<tr>  			<td><a href="http://www.classzone.com/cz/books/ml_lit_gr07_fl/book_home.htm?state=FL" target="_blank"><strong>M/J Literature Grade 7</strong></a><br />  			&nbsp;</td>  			<td>McDougal Littell Literature Grade 7 Online textbook and digital resources. Access and Key Code Information can be obtained from the classroom teacher.</td>  		</tr>  		<tr>  			<td><a href="http://www.classzone.com/cz/books/ml_lit_gr08_fl/book_home.htm?state=FL" target="_blank"><strong>M/J Literature Grade 8</strong></a><br />  			&nbsp;</td>  			<td>McDougal Littell Literature Grade 8 Online textbook and digital resources. Access and Key Code Information can be obtained from the classroom teacher.</td>  		</tr>  		<tr>  			<td><strong><span style="color:#0000CD">Science</span><br />  			<a href="http://my.hrw.com/" target="_blank">M/J Compre Science 1</a></strong><br />  			&nbsp;</td>  			<td>Florida Science Fusion. You will receive your username and password from your teacher.</td>  		</tr>  		<tr>  			<td><a href="http://my.hrw.com/" target="_blank"><strong>M/J Compre Science 2</strong></a><br />  			&nbsp;</td>  			<td>Florida Science Fusion&nbsp; You will receive your username and password from your teacher.</td>  		</tr>  		<tr>  			<td><a href="http://my.hrw.com/" target="_blank"><strong>M/J Compre Science 3</strong></a><br />  			&nbsp;</td>  			<td>Florida Science Fusion&nbsp; You will receive your username and password from your teacher.</td>  		</tr>  		<tr>  			<td><span style="color:#0000CD"><strong>Social Studies</strong></span><br />  			<a href="http://www.phschool.com/webcodes10/index.cfm?wcprefix=muk&amp;wcsuffix=0000&amp;area=view" target="_blank"><strong>World History-Grade 6</strong></a><br />  			<br />  			&nbsp;</td>  			<td>History of the World Online resources that help to support with your textbook.</td>  		</tr>  		<tr>  			<td><a href="http://connected.mcgraw-hill.com/connected/login.do" target="_blank"><strong>Florida Civics, Economics, and Geography-Grade 7</strong></a><br />  			&nbsp;</td>  			<td>Florida Civics, Economics and Geography - Access and Key Code Information can be obtained from the classroom teacher.</td>  		</tr>  		<tr>  			<td><a href="http://www.classzone.com/books/cas/index.cfm" target="_blank"><strong>American History-Grade 8</strong></a></td>  			<td>Creating America</td>  		</tr>  	</tbody>  </table>  </td></tr></TABLE>
+    </td><td class='portal_block_14' valign='top' height='100% 'colspan='1' rowspan='1'><TABLE class="Box" cellspacing="0" cellpadding="0" width=100% height=100%><TR><TD class="BoxHeading">DCPS HS Digital Curriculum</TD></TR><TR><TD class="BoxContent" valign="Top"><table border="1" cellpadding="1" cellspacing="1" style="width:500px">  	<tbody>  		<tr>  			<td><span style="color:#0000CD"><strong>Math</strong></span><br />  			<a href="http://connected.mcgraw-hill.com/connected/login.do" target="_blank"><strong>Algebra 1/Algebra 1 Honors</strong></a><br />  			&nbsp;</td>  			<td>ConnectED textbook and digital resources. Access and Master Code Information can be obtained from the teacher.</td>  		</tr>  		<tr>  			<td><strong><a href="http://connected.mcgraw-hill.com/connected/login.do" target="_blank">Algebra 2/Algebra 2 Honors</a></strong></td>  			<td>ConnectED textbook and digital resources. Access and Master Code Information can be obtained from the teacher.</td>  		</tr>  		<tr>  			<td><a href="http://www.wadsworth.com/cgi-wadsworth/course_products_wp.pl?fid=M20b&amp;product_isbn_issn=9780538449670&amp;token=F54CFC1761CF55342CBD8B99053D41E74E63F01D261C71F6B3F4AD24934C3934B14CE030251B65C602F90A78B89E0E20AA32DE5E77D0EA0A" target="_blank"><strong>Advanced Algebra with Financial Applications</strong></a></td>  			<td>Financial Algebra Student Edition</td>  		</tr>  		<tr>  			<td><strong><a href="http://connected.mcgraw-hill.com/connected/login.do" target="_blank">Geometry/Honors</a></strong></td>  			<td>ConnectED textbook and digital resources. Access and Master Code Information can be obtained from the classroom teacher.</td>  		</tr>  		<tr>  			<td><strong><a href="http://www.cengage.com/cgi-wadsworth/course_products_wp.pl?fid=M20bI&amp;product_isbn_issn=9781111427641" target="_blank">Pre-Calculus </a></strong></td>  			<td>PreCalculus with Limits- Access information can be obtained from the teacher.</td>  		</tr>  		<tr>  			<td><span style="color:#0000CD"><strong>ELA/Reading</strong></span><br />  			<strong><a href="https://springboard.collegeboard.com/SB/login.action" target="_blank"><span style="color:#000000">Spring Board Grades 9-12</span></a></strong><br />  			&nbsp;</td>  			<td>AP,College and Career Readiness for All Students</td>  		</tr>  		<tr>  			<td><strong><a href="http://my.hrw.com/" target="_blank">English 1</a></strong></td>  			<td>Florida Elements of Language and Literature-Grade 9</td>  		</tr>  		<tr>  			<td><strong><a href="http://my.hrw.com/" target="_blank">English 2</a></strong></td>  			<td>Florida Elements of Language and Literature-Grade 10</td>  		</tr>  		<tr>  			<td><strong><a href="http://my.hrw.com/" target="_blank">English 3</a></strong></td>  			<td>Florida Elements of Language and Literature-Grade 11</td>  		</tr>  		<tr>  			<td><strong><a href="http://my.hrw.com/" target="_blank">English 4</a></strong></td>  			<td>Florida Elements of Language and Literature-Grade 12</td>  		</tr>  		<tr>  			<td><strong><a href="http://bcs.bedfordstmartins.com/languageofcomp1e/default.asp?s=&amp;n=&amp;i=&amp;v=&amp;o=&amp;ns=0&amp;uid=0&amp;rau=0" target="_blank">AP Language </a></strong></td>  			<td>The Language of Composition</td>  		</tr>  		<tr>  			<td><strong><a href="http://bcs.bedfordstmartins.com/meyerlit8e/default.asp?s=&amp;n=&amp;i=&amp;v=&amp;o=&amp;ns=0&amp;uid=0&amp;rau=0" target="_blank">AP Literature </a></strong></td>  			<td>The Bedford Introduction to Literature</td>  		</tr>  		<tr>  			<td><span style="color:#0000CD"><strong>Science</strong></span><br />  			<strong><a href="http://glencoe.mcgraw-hill.com/sites/0015081981/" target="_blank">Anatomy and Physiology</a></strong></td>  			<td>Florida Hole&#39;s Essentials of Human Anatomy and Physiology</td>  		</tr>  		<tr>  			<td><strong><a href="http://www.classzone.com/" target="_blank">Biology</a></strong></td>  			<td>Online Digital Biology Textbook for Teachers and Students. Biology students register using the activation code provided by their teacher.</td>  		</tr>  		<tr>  			<td><strong><a href="http://glencoe.mcgraw-hill.com/sites/0035456775/" target="_blank">AP Biology</a></strong></td>  			<td>Biology by Mader - Online textbook resources</td>  		</tr>  		<tr>  			<td><strong><a href="http://www.agiweb.org/earthcomm/index2.html?State=FL" target="_blank">Earth/Space Science Honors</a></strong></td>  			<td>Earth Comm - Earth System Science in the Community</td>  		</tr>  		<tr>  			<td><strong><a href="http://www.wadsworth.com/cgi-wadsworth/course_products_wp.pl?fid=M20b&amp;product_isbn_issn=9780495556718&amp;token=02288184936B4B4662B629CD826173C925B385877DF6231CBA6770B03032D551E44BDF245CB1385E2DE0708B0D41F3032FD9D80BAE7E33C8" target="_blank">AP Environmental Science</a></strong></td>  			<td>Living in the Environment</td>  		</tr>  		<tr>  			<td><strong><a href="http://www.us-satellite.net/marinescience" target="_blank">Marine Science</a></strong></td>  			<td>Access information can be obtained from the teacher.</td>  		</tr>  		<tr>  			<td><strong><a href="http://glencoe.mcgraw-hill.com/sites/0003022010/" target="_blank">Zoology</a></strong></td>  			<td>Florida Zoology, Miller 2010 / 8th edition</td>  		</tr>  		<tr>  			<td><span style="color:#0000CD"><strong>Social Studies</strong></span><br />  			<strong><a href="http://highered.mcgraw-hill.com/sites/0078652693/" target="_blank">World History Grade 10</a></strong></td>  			<td>Glencoe World History- Teacher and Student Center online resources</td>  		</tr>  		<tr>  			<td><strong><a href="http://www.classzone.com/books/americans/index.cfm" target="_blank">American History-Grade 11</a></strong></td>  			<td>The Americans- Online activities and research links for each chapter of the textbook.</td>  		</tr>  		<tr>  			<td><strong><a href="http://www.phschool.com/webcodes10/index.cfm?fuseaction=home.gotoWebCode&amp;wcprefix=mqk&amp;wcsuffix=1000" target="_blank">American Government-Grade 12</a></strong></td>  			<td>MaGruder&#39;s American Government with Florida State and Local Government- Online resources to help review and enrich the textbook.</td>  		</tr>  		<tr>  			<td><span style="color:#0000CD"><strong>World Languages</strong></span><br />  			<strong><a href="http://www.duvalschools.org/static/aboutdcps/departments/acadprog/world_languages/images/AP_French_Language_Syllabus.pdf" target="_blank">Ap French </a></strong></td>  			<td>Duval County AP French Language Syllabus</td>  		</tr>  		<tr>  			<td><strong><a href="http://college.cengage.com/site_engine/" target="_blank">Italian III, IV</a></strong></td>  			<td>Da Capo</td>  		</tr>  	</tbody>  </table>  </td></tr></TABLE>
+    </td></tr></table><script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script>
+$('.Portal_Dashboard_Table').each(function(){
+	var height = $('body').height() - $(this).offset().top;
+	if(height < $(this).height())
+		height - $(this).height();
+	$(this).css('min-height', height);
+	function drawChart() {
+		$('.google_graph').each(function() {
+			var options = $(this).data('options');
+			var wrapper = new google.visualization.ChartWrapper(options);
+			window.chart_wrappers.push(wrapper);
+			for(var i in window.chart_wrappers) {
+				window.chart_wrappers[i].draw();
+			}
+		});
+	}
+	google.load("visualization", "1", {packages:["corechart"]});
+	google.setOnLoadCallback(drawChart);
+});
+(function($)
+{
+	var addresses	= $('#EmailAddressList');
+	var email		= $('#Email');
+	var from		= $('#EmailFrom');
+	var cc			= $('#EmailCC');
+	var copy		= $('#EmailCopy');
+	var message		= $('#EmailMessage');
+	var loading		= $('#EmailLoading');
+	var submit		= $('#EmailSubmit');
+	var teachers	= $('.EmailTeacher');
+
+	teachers.change(function()
+	{
+		var checked = teachers.filter(':checked');
+		if(checked.length > 0) email.show();
+		else email.hide();
+	});
+
+	email.submit(function()
+	{
+		var to = [];
+		teachers.filter(':checked').each(function(){to.push($(this).val())});
+		to = JSON.stringify(to);
+
+		if(message.val().length<=0) alert('Please enter an email message.');
+		else
+		{
+			loading.show();
+			submit.hide();
+
+			var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,6})$/;
+			if(reg.test(from.val()) == false) alert('Please double check your email address and ensure its accuracy.');
+			else $.post(window.location.href,{_FOCUS_PDF:'Y',email:1,from:from.val(),cc:cc.val(),copy:copy.is(':checked') ? 1 : 0,to:to,message:message.val()},function(data)
+			{
+				if($.trim(data) != '1') alert($.trim(data));
+				else
+				{
+					message.val('');
+					from.val('');
+					cc.val('');
+					addresses.val('');
+					copy.filter(':checked').click();
+					teachers.filter(':checked').click();
+					email.hide();
+					alert('Your message has been sent!');
+				}
+				loading.hide();
+				submit.show();
+			});
+		}
+		return false;
+	});
+
+	addresses.change(function()
+	{
+		from.val($(this).val());
+	});
+
+})(jQuery);
+
+</script>
+    </DIV></DIV><!----><style>
+        .focus-alert {
+        display: block;
+        padding-top: 31px;
+        min-width: 100px;
+        background: #EEF;
+        text-align: center;
+        overflow: auto;
+        }
+
+        .focus-alert .title {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 30px;
+        line-height: 30px;
+        background: #DDE;
+        font-size: 18px;
+        font-weight: bold;
+        border-bottom: 1px solid #AAB;
+        }
+
+        .focus-alert .message {
+        display: block;
+        padding: 10px;
+        font-size: 16px;
+        line-height: 1.2em;
+        }
+
+        .focus-alert .button {
+        margin-bottom: 10px;
+        font-size: 16px;
+        }
+
+        #keepalive-alert .seconds {
+        font-weight: bold;
+        }
+
+        #timeout-login input {
+        box-sizing: border-box;
+        display: block;
+        margin: 10px 0;
+        padding: 3px 2px;
+        width: 100%;
+        border: 1px solid #AAA;
+        background-color: #FFF:
+        }
+
+        #timeout-login .error {
+        margin: 10px;
+        height: 1.2em;
+        font-size: 13px;
+        color: #F00;
+        }
+    </style>
+    <div id="keepalive-alert" class="focus-alert focus-modal-hidden">
+        <div class="title">Attention</div>
+
+        <div class="message">
+            Your login session will time out in approximately
+            <span class="seconds"></span> second(s).
+        </div>
+
+        <button class="button">Stay Logged In</button>
+    </div>
+
+    <div id="session-alert" class="focus-alert focus-modal-hidden">
+        <div class="title">Attention</div>
+
+        <div class="message">
+            The student, school, year or marking period has been changed in a
+            different window or tab.<br>
+            Click the button below to revert your session options.
+        </div>
+
+        <button class="button">Recover Options</button>
+    </div>
+
+    <div id="timeout-login" class="focus-alert focus-modal-hidden">
+        <div class="title">Log In</div>
+
+        <form class="message" autocomplete="off">
+            <div>Your login session has expired. Please log in again.</div>
+
+            <input name="username" placeholder="Username">
+            <input name="password" placeholder="Password" type="password">
+
+            <div class="error invisible"></div>
+
+            <button class="button">Submit</button>
+        </form>
+    </div>
+    <script>
+(function($) {
+	'use strict';
+
+	//change Top Form to use php
+	jQuery("#Top_Icon #redirects").attr("action", "Modules.php?modname=misc/Portal.php");
+
+	var Focus = (window.Focus = window.Focus || {});
+
+	var session = {"UserSyear":"2014","UserSchool":"2148","student_id":"8222424","STAFF_ID":null,"staff_id":null,"UserCoursePeriod":null,"UserMP":"2903","AJAXRequestHandler":null};
+	Cookies.set('current_session', JSON.stringify(session));
+
+	var time_limit  = 1440;
+	var server_time = 1437843837;
+	var client_time = Math.floor(new Date() / 1000);
+	var $keepalive  = $('#keepalive-alert');
+	var $session    = $('#session-alert');
+	var $login      = $('#timeout-login');
+
+	var saml = false;
+
+	// Adjust the time limit to account for the difference between the server and client time
+	time_limit += client_time - server_time;
+
+	// Subtract a minute so the user can refresh the session at the last second and still have time for the request to go through
+	time_limit -= 60;
+
+	Focus.sessionState = {
+		time_limit       : time_limit,
+		keepalive_active : false,
+		login_active     : false,
+		session_active   : false,
+	};
+
+	if (!saml) {
+		setInterval(function(){
+			checkTimeout();
+			checkSession();
+		}, 1000);
+	}
+
+	$keepalive.on('click', '.button', keepAlive);
+	$session.on('click', '.button', restoreSession);
+	$login.on('submit', login);
+
+	// Session keys that are added to over time and should be kept up to date
+	var additive_keys = {
+		AJAXRequestHandler : true
+	};
+
+	function checkTimeout() {
+		var time = Cookies.get('session_timeout');
+		var left = Focus.sessionState.time_limit - (Math.floor(new Date().getTime() / 1000) - time);
+
+		if(left < 0) {
+			if(!Focus.sessionState.login_active) {
+				Focus.modal($login, true);
+				$keepalive.trigger('focusModalClose');
+				$session.trigger('focusModalClose');
+
+				Focus.sessionState.login_active     = true;
+				Focus.sessionState.keepalive_active = false;
+
+				$login.find('form').get(0).reset();
+				$login.find('.error').addClass('invisible')
+				$login.find(':input:visible').first().focus();
+
+				logout();
+			}
+		}
+		else if(left <= 60) {
+			if(!Focus.sessionState.keepalive_active) {
+				Focus.modal($keepalive, true);
+
+				Focus.sessionState.login_active     = false;
+				Focus.sessionState.keepalive_active = true;
+			}
+
+			$keepalive.find('.seconds').html(left);
+		}
+		else {
+			if(Focus.sessionState.login_active) {
+				$login.trigger('focusModalClose');
+
+				Focus.sessionState.login_active = false;
+			}
+
+			if(Focus.sessionState.keepalive_active) {
+				$keepalive.trigger('focusModalClose');
+
+				Focus.sessionState.keepalive_active = false;
+			}
+		}
+	}
+
+	function checkSession() {
+		if(Focus.sessionState.session_active || Focus.sessionState.login_active) {
+			return;
+		}
+
+		var session_cookie = Cookies.get('current_session');
+		if (session_cookie === 'undefined') {
+			return;
+		}
+
+		var current = JSON.parse(session_cookie);
+
+		for(var i in current) {
+			if(additive_keys[i]) {
+				continue;
+			}
+
+			if(session[i] !== current[i]) {
+				Focus.modal($session, true);
+				Focus.sessionState.session_active = true;
+
+				return;
+			}
+		}
+	}
+
+	function keepAlive() {
+		$.post('sessionState.php')
+			.fail(function() {
+				window.location = 'index.php?logout';
+			})
+			.done(function(result) {
+				if(result !== '1') {
+					window.location = 'index.php?logout';
+					return;
+				}
+			});
+	}
+
+	function login(e) {
+		e.preventDefault();
+
+		updateAdditiveKeys();
+
+		var data = $login.find('form').serialize();
+		var session_string = JSON.stringify(session);
+
+		$.post('sessionState.php', {login : data, session : session_string})
+			.fail(function() {
+				window.location = 'index.php?logout';
+			})
+			.done(function(result) {
+				if(result === '1') {
+					$login.trigger('focusModalClose');
+					$keepalive.trigger('focusModalClose');
+					$session.trigger('focusModalClose');
+
+					Focus.sessionState.login_active     = false;
+					Focus.sessionState.keepalive_active = false;
+					Focus.sessionState.session_active   = false;
+				}
+				else if(result === '2') {
+					window.location = window.location;
+				}
+				else {
+					$login.find('.error').removeClass('invisible').html(result);
+				}
+			});
+	}
+
+	function logout() {
+		$.post('sessionState.php', {logout : 1})
+			.fail(function() {
+				window.location = 'index.php?logout';
+			})
+			.done(function(result) {
+				if(result !== '1') {
+					window.location = 'index.php?logout';
+					return;
+				}
+			});
+	}
+
+	function restoreSession() {
+		updateAdditiveKeys();
+
+		var session_string = JSON.stringify(session);
+
+		$.post('sessionState.php', {session : session_string})
+			.fail(function() {
+				window.location = 'index.php?logout';
+			})
+			.done(function(result) {
+				if(result === '1') {
+					Cookies.set('current_session', session_string);
+
+					$login.trigger('focusModalClose');
+					$keepalive.trigger('focusModalClose');
+					$session.trigger('focusModalClose');
+
+					Focus.sessionState.login_active     = false;
+					Focus.sessionState.keepalive_active = false;
+					Focus.sessionState.session_active   = false;
+				}
+				else if(result === '2') {
+					window.location = window.location;
+				}
+				else {
+					window.location = 'index.php?logout';
+				}
+			});
+	}
+
+	function updateAdditiveKeys() {
+		var current_session = JSON.parse(Cookies.get('current_session'));
+
+		for(var i in additive_keys) {
+			session[i] = current_session[i];
+		}
+	}
+}(jQuery));
+</script>
+</body></html>

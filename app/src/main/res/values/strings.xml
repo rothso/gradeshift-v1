@@ -1,0 +1,9 @@
+<resources>
+    <string name="app.name">Grades</string>
+    <string name="activity.main.title">Grades</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="settings.action">Settings</string>
+    <string name="grades.text">Get grades</string>
+    <string name="grades.debug">Debug</string>
+</resources>

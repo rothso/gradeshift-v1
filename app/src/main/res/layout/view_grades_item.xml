@@ -1,0 +1,59 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="?android:attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2">
+
+        <TextView
+            android:id="@+id/assignment_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Thing Test" />
+
+        <TextView
+            android:id="@+id/points_earned"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/assignment_name"
+            tools:text="96" />
+
+        <TextView
+            android:id="@+id/fraction_slash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/assignment_name"
+            android:layout_toRightOf="@id/points_earned"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="/" />
+
+        <TextView
+            android:id="@+id/points_possible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/assignment_name"
+            android:layout_toRightOf="@id/fraction_slash"
+            tools:text="100" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:textSize="24dp"
+        tools:text="100 A" />
+
+</LinearLayout>
